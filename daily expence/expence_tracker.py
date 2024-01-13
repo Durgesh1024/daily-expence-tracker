@@ -33,13 +33,13 @@ class ExpenseTracker:
     def monthly_summary(self):
         for category, entries in self.expenses.items():
             total_amount = sum(entry["amount"] for entry in entries)
-            print(f"{category.capitalize()}: ${total_amount:.2f}")
+            print(f"{category.capitalize()}: Rs.{total_amount:.2f}")
 
     def category_summary(self):
         category = input("Enter the expense category to view its summary: ")
         entries = self.expenses.get(category, [])
         total_amount = sum(entry["amount"] for entry in entries)
-        print(f"Total {category.capitalize()} expenses: ${total_amount:.2f}")
+        print(f"Total {category.capitalize()} expenses: Rs.{total_amount:.2f}")
 
 def main():
     expense_tracker = ExpenseTracker()
